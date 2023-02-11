@@ -1,0 +1,19 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(0, 0, 39);
+}
+
+main {
+  min-height:100%;
+  padding: 10%;
+  background-color: rgb(246, 246, 246);
+}
