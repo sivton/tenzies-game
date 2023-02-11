@@ -1,56 +1,73 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(0, 0, 39);
-  margin: 0;
-  padding: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  width: 100%;
+    background-color: rgb(0, 0, 39);
+    margin: 0;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;  
-  height: 400px;
-  max-width: 800px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgb(246, 246, 246);
-  box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.25);
 }
 
 .dice--container {
-  display: grid;
-  grid-template: auto auto / repeat(5, 1fr);
-  gap: 20px;
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
 }
 
 .dice--box {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
 }
 
 .dice--text {
-  font-size: xx-large;
-  font-weight: 700;
+    font-size: xx-large;
+    font-weight: 700;
 }
 
+.roll--dice {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5035FF;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
 
+.roll--dice:focus {
+    outline: none;
+}
+
+.roll--dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
