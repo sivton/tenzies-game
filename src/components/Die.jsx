@@ -1,9 +1,15 @@
 import React from "react"
 
-export default function Die(prop) {
+export default function Die(props) {
+
+    const styles = {
+        backgroundColor: props.isHeld ? "#59E391":"white"
+    }
+
     return (
-        <div className="dice--box">
-            <p className="dice--text">{prop.value}</p>
+        <div className="dice--box" style={styles}>
+            <p className="dice--text">{props.value}</p>
         </div>
     )
+
 }
