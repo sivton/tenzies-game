@@ -12,7 +12,7 @@ export default function App() {
             newDice.push({
                 id: nanoid(),
                 value: Math.floor(Math.random() * 6) + 1,
-                isHeld: true
+                isHeld: false
             });
         }
         window.console.log(newDice);
@@ -24,7 +24,9 @@ export default function App() {
     }
 
     function holdDice(id){
-        console.log(id)
+        setDice(oldDice => oldDice.map(die => {
+            return die.id === id ? {...die, isHeld:!die.isHeld} : die
+        }))
     }
 
     const diceElements = dice.map(die =>
