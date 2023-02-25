@@ -6,6 +6,15 @@ export default function App() {
 
     const [dice, setDice] = React.useState(allNewDice)
 
+
+    function generateNewDie(){
+        return {
+            id: nanoid(),
+            value: Math.floor(Math.random() * 6) + 1,
+            isHeld: false   
+        }
+    }
+
     function allNewDice() {
         let newDice = [];
         for (let i = 0; i < 10; i++) {
@@ -19,8 +28,11 @@ export default function App() {
         return newDice;
     }
 
+
     function rollDice() {
-        setDice(allNewDice())
+        setDice(oldDice => oldDice.map(die => {
+            return die.isHeld ? die : generateNewDie()
+        }))
     }
 
     function holdDice(id){
@@ -40,6 +52,7 @@ export default function App() {
 
     return (
         <main>
+            
             <div className="dice--container">
                 {diceElements}
             </div>
