@@ -68,6 +68,12 @@ main {
     font-weight: 700;
 }
 
+.dice--img {
+    text-align: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
 .roll--dice {
     height: 50px;
     width: 150px;
