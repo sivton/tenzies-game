@@ -44,6 +44,12 @@ main {
 }
 
 
+.rolls {
+    font-family: 'Inter', sans-serif;
+    margin-top: 0;
+    text-align: center;
+}
+
 .dice--container {
     display: grid;
     grid-template: auto auto / repeat(5, 1fr);
